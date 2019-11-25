@@ -747,4 +747,99 @@
             },
         ],
     },
+
+    '3ycy.com': {
+        _name: '三界异次元',
+        www: [
+            {
+                title: '最近更新',
+                docs: 'https://docs.rsshub.app/anime.html#san-jie-yi-ci-yuan',
+                source: '/',
+                target: '/3ycy/home',
+            },
+        ],
+    },
+
+    'emi-nitta.net': {
+        _name: 'Emi Nitta',
+        '.': [
+            {
+                title: '最近更新',
+                docs: 'https://docs.rsshub.app/other.html#xin-tian-hui-hai-guan-fang-wang-zhan',
+                source: '/updates',
+                target: '/emi-nitta/updates',
+            },
+            {
+                title: '新闻',
+                docs: 'https://docs.rsshub.app/other.html#xin-tian-hui-hai-guan-fang-wang-zhan',
+                source: '/contents/news',
+                target: '/emi-nitta/news',
+            },
+        ],
+    },
+
+    'alter-shanghai.cn': {
+        _name: 'Alter',
+        '.': [
+            {
+                title: '新闻',
+                docs: 'https://docs.rsshub.app/shopping.html#alter-zhong-guo',
+                source: '/cn/news.html',
+                target: '/alter-cn/news',
+            },
+        ],
+    },
+
+    'itslide.com': {
+        _name: 'ITSlide',
+        www: [
+            {
+                title: '最新',
+                docs: 'https://docs.rsshub.app/programming.html#itslide',
+                source: '/*',
+                target: '/itslide/new',
+            },
+        ],
+    },
+
+    'leboncoin.fr': {
+        _name: 'leboncoin',
+        www: [
+            {
+                title: 'ads',
+                docs: 'https://docs.rsshub.app/en/shopping.html#leboncoin',
+                source: '/recherche',
+                target: (params, url) => '/leboncoin/ad/' + url.split('?')[1],
+            },
+        ],
+    },
+
+    'yuancheng.work': {
+        _name: '远程.work',
+        '.': [
+            {
+                title: '招聘信息',
+                docs: 'https://docs.rsshub.app/other.html#yuan-cheng-work',
+                source: '/:caty',
+                target: (params, url) => {
+                    if (!url) {
+                        return '/remote-work';
+                    }
+                    return '/remote-work/' + /\w+-(\w+)-\w+/.exec(url)[1];
+                },
+            },
+        ],
+    },
+
+    'chinatimes.com': {
+        _name: '中時電子報',
+        www: [
+            {
+                title: '新聞',
+                docs: 'https://docs.rsshub.app/traditional-media.html#zhong-shi-dian-zi-bao',
+                source: '/:caty',
+                target: (params) => '/chinatimes/' + params.caty,
+            },
+        ],
+    },
 });
