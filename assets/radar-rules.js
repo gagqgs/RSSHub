@@ -110,28 +110,34 @@
                 docs: 'https://docs.rsshub.app/social-media.html#twitter',
                 source: '/:id',
                 target: '/twitter/user/:id',
-                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore',
+                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore' && params.id !== 'search',
             },
             {
                 title: '用户关注时间线',
                 docs: 'https://docs.rsshub.app/social-media.html#twitter',
                 source: '/:id',
                 target: '/twitter/followings/:id',
-                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore',
+                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore' && params.id !== 'search',
             },
             {
                 title: '用户喜欢列表',
                 docs: 'https://docs.rsshub.app/social-media.html#twitter',
                 source: '/:id',
                 target: '/twitter/likes/:id',
-                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore',
+                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore' && params.id !== 'search',
             },
             {
                 title: '列表时间线',
                 docs: 'https://docs.rsshub.app/social-media.html#twitter',
                 source: '/:id/lists/:name',
                 target: '/twitter/list/:id/:name',
-                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore',
+                verification: (params) => params.id !== 'home' && params.id !== 'explore' && params.id !== 'notifications' && params.id !== 'messages' && params.id !== 'explore' && params.id !== 'search',
+            },
+            {
+                title: '关键词',
+                docs: 'https://docs.rsshub.app/social-media.html#twitter',
+                source: '/search',
+                target: (params, url) => `/twitter/keyword/${new URL(url).searchParams.get('q')}`,
             },
         ],
     },
@@ -471,6 +477,16 @@
                 docs: 'https://docs.rsshub.app/program-update.html#pu-gong-ying-ying-yong-fen-fa',
                 source: '/:app',
                 target: '/pgyer/:app',
+            },
+        ],
+    },
+    'pianyuan.la': {
+        _name: '片源网',
+        '.': [
+            {
+                title: '电影和剧集',
+                description: 'https://docs.rsshub.app/multimedia.html#pian-yuan',
+                source: '/',
             },
         ],
     },
@@ -839,6 +855,74 @@
                 docs: 'https://docs.rsshub.app/traditional-media.html#zhong-shi-dian-zi-bao',
                 source: '/:caty',
                 target: (params) => '/chinatimes/' + params.caty,
+            },
+        ],
+    },
+
+    'ithome.com': {
+        _name: 'IT 之家',
+        it: [
+            {
+                title: 'IT 资讯',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/it',
+            },
+        ],
+        soft: [
+            {
+                title: '软件之家',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/soft',
+            },
+        ],
+        win10: [
+            {
+                title: 'win10 之家',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/win10',
+            },
+        ],
+        iphone: [
+            {
+                title: 'iphone 之家',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/iphone',
+            },
+        ],
+        ipad: [
+            {
+                title: 'ipad 之家',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/ipad',
+            },
+        ],
+        android: [
+            {
+                title: 'android 之家',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/android',
+            },
+        ],
+        digi: [
+            {
+                title: '数码之家',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/digi',
+            },
+        ],
+        next: [
+            {
+                title: '智能时代',
+                docs: 'https://docs.rsshub.app/new-media.html#it-zhi-jia',
+                source: '/',
+                target: '/ithome/next',
             },
         ],
     },
