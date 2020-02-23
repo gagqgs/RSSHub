@@ -207,6 +207,10 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 
 <Route author="SayaSS" example="/pcr/news" path="/pcr/news"/>
 
+### 台服公告
+
+<Route author="hoilc" example="/pcr/news-tw" path="/pcr/news-tw"/>
+
 ## 篝火营地
 
 ### 游戏资讯
@@ -276,6 +280,12 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 ### 游戏公告与新闻
 
 <Route author="Astrian" example="/arknights/news" path="/arknights/news"/>
+
+## 奶牛关
+
+### 元素文章
+
+<Route author="hoilc" example="/cowlevel/element/1370" path="/cowlevel/element/:id" :paramsDesc="['元素 ID, 可在 URL 中找到']" radar="1" />
 
 ## 网易大神
 
@@ -384,3 +394,13 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 ### 公告
 
 <Route author="magic-akari" example="/kirara/news" path="/kirara/news"/>
+
+## マギアレコード（Magia Record, 魔法纪录）
+
+### 游戏公告
+
+<Route author="y2361547758" example="/magireco/announcements" path="/magireco/announcements"/>
+
+### 游戏横幅
+
+<Route author="y2361547758" example="/magireco/event_banner" path="/magireco/event_banner"/>

@@ -510,6 +510,16 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 <Route author="umm233" example="/douban/movie/weekly" path="/douban/movie/weekly"/>
 
+### 豆瓣电影分类
+
+<Route author="zzwab" example="/douban/movie/classification/R/7.5/Netflix,剧情,2020" path="/douban/movie/classification/:sort?/:score?/:tags?" :paramsDesc="['排序方式，默认为U', '最低评分，默认不限制', '分类标签，多个标签之间用英文逗号分隔，常见的标签到豆瓣电影的分类页面查看，支持自定义标签']" />
+
+排序方式可选值如下
+
+| 近期热门 | 标记最多 | 评分最高 | 最近上映 |
+| -------- | -------- | -------- | -------- |
+| U        | T        | S        | R        |
+
 ### 豆瓣小组
 
 <Route author="DIYgod" example="/douban/group/camera" path="/douban/group/:groupid" :paramsDesc="['豆瓣小组的 id']"/>
@@ -569,7 +579,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 ::: tip 提示
 
 -   **目前只支持整数型 id**
--   字母型的 id，可以通过头像图片链接来找到其整数型 id，图片命名规则`ul[userid]-*.jpg`
+-   字母型的 id，可以通过头像图片链接来找到其整数型 id，图片命名规则`ul[userid]-*.jpg`或`u[userid]-*.jpg`，即取文件名中间的数字
 -   例如：用户 id: `MovieL`他的头像图片链接：`https://img1.doubanio.com/icon/ul1128221-98.jpg`他的整数型 id: `1128221`
 
 :::
