@@ -14,7 +14,7 @@ pageClass: routes
 
 ### 视频更新
 
-<Route author="ImSingee" example="/algocasts" path="/algocasts" radar="1"></Route>
+<Route author="ImSingee" example="/algocasts" path="/algocasts" radar="1" rssbud="1"></Route>
 
 > AlgoCasts 需要付费订阅，RSS 仅做更新提醒，不含付费内容.
 
@@ -23,6 +23,12 @@ pageClass: routes
 ### 搜索结果
 
 <Route author="fengkx" example="/cve/search/PostgreSQL" path="/cve/search/:keyword" :paramsDesc="['关键词']" />
+
+## deeplearning.ai
+
+### TheBatch 周报
+
+<Route author="nczitzk" example="/deeplearning/thebatch" path="/deeplearning/thebatch"/>
 
 ## Dockone
 
@@ -75,35 +81,35 @@ GitHub 官方也提供了一些 RSS:
 
 ### 用户仓库
 
-<Route author="DIYgod" example="/github/repos/DIYgod" path="/github/repos/:user" :paramsDesc="['用户名']" radar="1"/>
+<Route author="DIYgod" example="/github/repos/DIYgod" path="/github/repos/:user" :paramsDesc="['用户名']" radar="1" rssbud="1"/>
 
 ### Trending
 
-<Route author="DIYgod" example="/github/trending/daily/javascript" path="/github/trending/:since/:language?" :paramsDesc="['时间跨度, 可在 [Trending 页](https://github.com/trending/javascript?since=monthly) URL 中找到, 可选 daily weekly monthly', '语言, 可在 [Trending 页](https://github.com/trending/javascript?since=monthly) URL 中找到']" radar="1"/>
+<Route author="DIYgod" example="/github/trending/daily/javascript" path="/github/trending/:since/:language?" :paramsDesc="['时间跨度, 可在 [Trending 页](https://github.com/trending/javascript?since=monthly) URL 中找到, 可选 daily weekly monthly', '语言, 可在 [Trending 页](https://github.com/trending/javascript?since=monthly) URL 中找到']" radar="1" rssbud="1"/>
 
 ### 仓库 Issues
 
-<Route author="HenryQW AndreyMZ" example="/github/issue/DIYgod/RSSHub/open/RSS%20wanted" path="/github/issue/:user/:repo/:state?/:labels?" :paramsDesc="['用户名', '仓库名', 'issue 状态，可选`open`,`closed`或`all`，默认为`open`', '标签列表，以逗号分隔']" radar="1"/>
+<Route author="HenryQW AndreyMZ" example="/github/issue/DIYgod/RSSHub/open/RSS%20wanted" path="/github/issue/:user/:repo/:state?/:labels?" :paramsDesc="['用户名', '仓库名', 'issue 状态，可选`open`,`closed`或`all`，默认为`open`', '标签列表，以逗号分隔']" radar="1" rssbud="1"/>
 
 ### 仓库 Pull Requests
 
-<Route author="hashman" example="/github/pull/DIYgod/RSSHub" path="/github/pull/:user/:repo" :paramsDesc="['用户名', '仓库名']" radar="1"/>
+<Route author="hashman" example="/github/pull/DIYgod/RSSHub" path="/github/pull/:user/:repo" :paramsDesc="['用户名', '仓库名']" radar="1" rssbud="1"/>
 
 ### 用户 Followers
 
-<Route author="HenryQW" example="/github/user/followers/HenryQW" path="/github/user/followers/:user" :paramsDesc="['用户名']" radar="1"/>
+<Route author="HenryQW" example="/github/user/followers/HenryQW" path="/github/user/followers/:user" :paramsDesc="['用户名']" radar="1" rssbud="1"/>
 
 ### 仓库 Stars
 
-<Route author="HenryQW" example="/github/stars/DIYgod/RSSHub" path="/github/stars/:user/:repo" :paramsDesc="['用户名', '仓库名']" radar="1"/>
+<Route author="HenryQW" example="/github/stars/DIYgod/RSSHub" path="/github/stars/:user/:repo" :paramsDesc="['用户名', '仓库名']" radar="1" rssbud="1"/>
 
 ### 仓库 Branches
 
-<Route author="max-arnold" example="/github/branches/DIYgod/RSSHub" path="/github/branches/:user/:repo" :paramsDesc="['用户名', '仓库名']" radar="1"/>
+<Route author="max-arnold" example="/github/branches/DIYgod/RSSHub" path="/github/branches/:user/:repo" :paramsDesc="['用户名', '仓库名']" radar="1" rssbud="1"/>
 
 ### 文件 Commits
 
-<Route author="zengxs" example="/github/file/DIYgod/RSSHub/master/lib/router.js" path="/github/file/:user/:repo/:branch/:filepath+" :paramsDesc="['用户名', '仓库名', '分支名', '文件路径']" radar="1">
+<Route author="zengxs" example="/github/file/DIYgod/RSSHub/master/lib/router.js" path="/github/file/:user/:repo/:branch/:filepath+" :paramsDesc="['用户名', '仓库名', '分支名', '文件路径']" radar="1" rssbud="1">
 
 | 用户名   | 仓库名   | 分支名   | 文件路径        |
 | -------- | -------- | -------- | --------------- |
@@ -131,11 +137,11 @@ GitHub 官方也提供了一些 RSS:
 
 ### 用户 Star 的仓库
 
-<Route author="LanceZhu" example="/github/starred_repos/DIYgod" path="/github/starred_repos/:user" :paramsDesc="['用户名']" radar="1"/>
+<Route author="LanceZhu" example="/github/starred_repos/DIYgod" path="/github/starred_repos/:user" :paramsDesc="['用户名']" radar="1" rssbud="1"/>
 
 ### 仓库 Contirbutors
 
-<Route author="zoenglinghou" example="/github/contributors/DIYgod/RSSHub" path="/github/contributors/:user/:repo/:order?/:anon?" :paramsDesc="['用户名', '仓库名', 'Commit 数量排序顺序，desc和asc（默认desc降序）', '是否包括匿名用户，默认不包含，任意值包含匿名用户']" radar="1"/>
+<Route author="zoenglinghou" example="/github/contributors/DIYgod/RSSHub" path="/github/contributors/:user/:repo/:order?/:anon?" :paramsDesc="['用户名', '仓库名', 'Commit 数量排序顺序，desc和asc（默认desc降序）', '是否包括匿名用户，默认不包含，任意值包含匿名用户']" radar="1" rssbud="1"/>
 
 ## GitLab
 
@@ -148,6 +154,12 @@ GitHub 官方也提供了一些 RSS:
 | trending | starred    | all |
 
 </Route>
+
+## Go 语言中文网
+
+### 周刊
+
+<Route author="Weilet" example="/go-weekly" path="/go-weekly"/>
 
 ## Hacker News
 
@@ -186,7 +198,7 @@ GitHub 官方也提供了一些 RSS:
 
 ### 最新
 
-<Route author="Yangshuqing" example="/itslide/new" path="/itslide/new" radar="1"/>
+<Route author="Yangshuqing" example="/itslide/new" path="/itslide/new" radar="1" rssbud="1"/>
 
 ## Kaggle
 
@@ -209,6 +221,10 @@ GitHub 官方也提供了一些 RSS:
 | All Categories | Featured | Research | Recruitment | Getting started | Masters | Playground | Analytics |
 
 </Route>
+
+### User Discussion
+
+<Route author="nczitzk" example="/kaggle/user/antgoldbloom" path="/kaggle/user/:user" :paramsDesc="['用户名']"/>
 
 ## LeetCode
 
@@ -297,6 +313,10 @@ GitHub 官方也提供了一些 RSS:
 ### 频道
 
 <Route author="LogicJake" example="/segmentfault/channel/frontend" path="/segmentfault/channel/:name" :paramsDesc="['频道名称，在频道 URL 可以找到']"/>
+
+### 用户
+
+<Route author="leyuuu" example="/segmentfault/user/yunqishequ_5aa899aad5395" path="/segmentfault/user/:name" :paramsDesc="['用户Id，用户详情页URL可以找到']"/>
 
 ## TesterHome
 
@@ -456,15 +476,15 @@ GitHub 官方也提供了一些 RSS:
 
 ### 专栏
 
-<Route author="Maecenas" example="/juejin/posts/56852b2460b2a099cdc1d133" path="/juejin/posts/:id" :paramsDesc="['用户 id, 可在用户页 URL 中找到']" radar="1"/>
+<Route author="Maecenas" example="/juejin/posts/3051900006845944" path="/juejin/posts/:id" :paramsDesc="['用户 id, 可在用户页 URL 中找到']" radar="1" rssbud="1"/>
 
 ### 收藏集
 
-<Route author="isQ" example="/juejin/collections/5791879979bc440066171bdb" path="/juejin/collections/:userId" :paramsDesc="['用户唯一标志符, 在浏览器地址栏URL中能够找到']"/>
+<Route author="isQ" example="/juejin/collections/1697301682482439" path="/juejin/collections/:userId" :paramsDesc="['用户唯一标志符, 在浏览器地址栏URL中能够找到']"/>
 
 ### 单个收藏夹
 
-<Route author="isQ" example="/juejin/collection/5cbf079df265da03462270f9" path="/juejin/collection/:collectionId" :paramsDesc="['收藏夹唯一标志符, 在浏览器地址栏URL中能够找到']"/>
+<Route author="isQ" example="/juejin/collection/6845243180586123271" path="/juejin/collection/:collectionId" :paramsDesc="['收藏夹唯一标志符, 在浏览器地址栏URL中能够找到']"/>
 
 ### 分享
 
@@ -492,11 +512,15 @@ GitHub 官方也提供了一些 RSS:
 
 订阅[全部板块资讯][osc_all]可以使用 <https://rsshub.app/oschina/news>
 
-[osc_all]: https://www.oschina.net/news '开源中国 - 全部资讯'
-[osc_gen]: https://www.oschina.net/news/industry '开源中国 - 综合资讯'
-[osc_proj]: https://www.oschina.net/news/project '开源中国 - 软件更新资讯'
-[osc_ind]: https://www.oschina.net/news/industry-news '开源中国 - 行业资讯'
-[osc_pl]: https://www.oschina.net/news/programming '开源中国 - 编程语言资讯'
+[osc_all]: https://www.oschina.net/news "开源中国 - 全部资讯"
+
+[osc_gen]: https://www.oschina.net/news/industry "开源中国 - 综合资讯"
+
+[osc_proj]: https://www.oschina.net/news/project "开源中国 - 软件更新资讯"
+
+[osc_ind]: https://www.oschina.net/news/industry-news "开源中国 - 行业资讯"
+
+[osc_pl]: https://www.oschina.net/news/programming "开源中国 - 编程语言资讯"
 
 </Route>
 
@@ -540,13 +564,15 @@ GitHub 官方也提供了一些 RSS:
 
 ### 日报
 
-<Route author="LogicJake prnake" example="/luogu/daily" path="/luogu/daily/:id?" :paramsDesc="['年度日报所在帖子id，可在 URL 中找到，不填默认为2020年日报']">
-</Route>
+<Route author="LogicJake prnake nczitzk" example="/luogu/daily" path="/luogu/daily/:id?" :paramsDesc="['年度日报所在帖子id，可在 URL 中找到，不填默认为2020年日报']"/>
 
 ### 近期比赛
 
-<Route author="prnake" example="/luogu/contest" path="/luogu/contest">
-</Route>
+<Route author="prnake" example="/luogu/contest" path="/luogu/contest"/>
+
+### 用户动态
+
+<Route author="solstice23" example="/luogu/user/feed/1" path="/luogu/user/feed/:uid" :paramsDesc="['用户 UID']"/>
 
 ## 码农俱乐部
 
@@ -634,6 +660,11 @@ GitHub 官方也提供了一些 RSS:
 <Route author="hellodword" example="/galaxylab" path="/galaxylab">
 </Route>
 
+## 前端技术文章
+
+<Route author="laampui" example="/front-end-rss" path="/front-end-rss" :paramsDesc="['分类']">
+</Route>
+
 ## 前端艺术家 && 飞冰早报
 
 ### 列表
@@ -657,6 +688,10 @@ GitHub 官方也提供了一些 RSS:
 ### 顺丰丰桥开放平台公告
 
 <Route author="phantomk" example="/sf/sffq-announce" path="/sf/sffq-announce"/>
+
+## 腾讯大数据
+
+<Route author="nczitzk" example="/tencent/bigdata" path="/tencent/bigdata"/>
 
 ## 腾讯游戏开发者社区
 

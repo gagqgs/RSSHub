@@ -269,7 +269,7 @@ sidebar: auto
 
     至此我们完成了一个最简单的路由
 
----
+* * *
 
 #### 使用缓存
 
@@ -294,7 +294,7 @@ const description = await ctx.cache.tryGet(link, async () => {
 
 tryGet 的实现可以看[这里](https://github.com/DIYgod/RSSHub/blob/master/lib/middleware/cache.js#L128)，第一个参数为缓存的 key，第二个参数为缓存数据获取方法，第三个参数为缓存时间，正常情况不应该传入，缓存时间默认为 [CACHE_CONTENT_EXPIRE](/install/#缓存配置)，且每次访问缓存会重新计算过期时间
 
----
+* * *
 
 #### 生成 RSS 源
 
@@ -383,7 +383,7 @@ ctx.state.data = {
 };
 ```
 
----
+* * *
 
 ### 添加脚本文档
 
@@ -408,11 +408,11 @@ ctx.state.data = {
 
         结果预览：
 
-        ***
+        * * *
 
         <Route author="HenryQW" example="/sspai/series" path="/sspai/series"/>
 
-        ***
+        * * *
 
         2.  多参数：
 
@@ -422,11 +422,11 @@ ctx.state.data = {
 
         结果预览：
 
-        ***
+        * * *
 
         <Route author="HenryQW" example="/github/issue/DIYgod/RSSHub" path="/github/issue/:user/:repo" :paramsDesc="['用户名', '仓库名']"/>
 
-        ***
+        * * *
 
 
         3. 复杂说明支持 slot:
@@ -569,6 +569,16 @@ ctx.state.data = {
 
 请注意，`target` 方法运行在沙盒中，对 `document` 的任何修改都不会反应到页面中
 
+### RSSBud
+
+[RSSBud](https://github.com/Cay-Zhang/RSSBud) 支持 RSSHub Radar 的规则并且也会自动更新，但是请注意：
+
+-   在 Radar 的规则中使用 `'.'` 子域名可以让 RSSBud 适配 `m` / `mobile` 等常见移动端子域名
+
+-   在 `target` 中使用 `document` 的规则并不适用 RSSBud：RSSBud 并不是一个浏览器插件，他只获取并分析网站的 URL
+
 ### 补充文档
 
 在 RSSHub 文档里给对应路径加上 `radar="1"`，这样就会显示一个 `支持浏览器扩展` 标记
+
+如果也支持 RSSBud，再加上 `rssbud="1"`，会显示 `支持 RSSBud` 标记

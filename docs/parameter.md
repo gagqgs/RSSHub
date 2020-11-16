@@ -22,7 +22,7 @@ filter 选出想要的内容
 
 -   filter_time: 过滤时间，仅支持数字，单位为秒。返回指定时间范围内的内容。如果条目没有输出`pubDate`或者格式不正确将不会被过滤
 
-举例 1: `https://rsshub.app/bilibili/fav/2267573/801952073?filter=编曲|摄影`
+举例 1: `https://rsshub.app/bilibili/fav/2267573/801952073?filter=编曲|摄影`  
 举例 2: <https://rsshub.app/nga/forum/489?filter_time=600>
 
 filterout 去掉不要的内容
@@ -57,7 +57,7 @@ filterout 去掉不要的内容
 
 ## 访问控制
 
-可以使用 `code` 或 `key` 进行访问控制。参考[访问控制配置](install/#fang-wen-mi-yue-ma)。
+可以使用 `code` 或 `key` 进行访问控制。参考[访问控制配置](install/#pei-zhi-fang-wen-kong-zhi-pei-zhi-fang-wen-mi-yue-ma)。
 
 ## 输出 Telegram 即时预览链接
 
@@ -76,6 +76,12 @@ Telegram 即时预览模式需要在官网制作页面处理模板，请前往[�
 -   scihub: 任意值开启
 
 举例: <https://rsshub.app/pnas/latest?scihub=1>
+
+## 中文简繁体转换
+
+-   opencc: s2t 简体转繁体、t2s 繁体转简体，其它可选值见 [OpenCC - Configurations](https://github.com/BYVoid/OpenCC#configurations-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+
+举例: <https://rsshub.app/dcard/posts/popular?opencc=t2s>
 
 ## 输出格式
 
